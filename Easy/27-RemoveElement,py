@@ -1,0 +1,21 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        
+        # counter for values not equal to val and index for result array
+        c = 0
+
+        # loop to interate through the array to remove any val 
+        for i in range(len(nums)):
+            
+            # if the array value is not equal to val then place it 
+            # in the array at the count index and increase count by 1
+            if nums[i] != val:
+                nums[c] = nums[i]
+                c+=1
+        
+        return c
