@@ -1,31 +1,22 @@
-class Solution(object):
-    def merge(self, nums1, m, nums2, n):
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: None Do not return anything, modify nums1 in-place instead.
+        Do not return anything, modify nums1 in-place instead.
         """
-        
-        # counter variables for the two sorted arrays and curr insert index
-        i, j, k = m-1, n-1, m+n-1
-        
-        # while loop to iterate over the two arrays using array 2 size
-        while j >= 0:
-            
-            '''
-            if counter of array 1 is greater than or equal to 0 and 
-            array 1 value is greater than array 2 value then 
-            insert array 1 value at the kth index in array 1.
-            '''
-            if  i >= 0 and nums1[i] > nums2[j]:
-                nums1[k] = nums1[i]
-                i-=1
-            
-            # otherwise insert array 2 value at the kth index
-            else:
-                nums1[k] = nums2[j]
-                j-=1
 
-            k-=1
+        # Pointers for nums1, nums2, and the position to insert in nums1
+        p1, p2, p = m-1, n-1, m+n-1
+
+        # Merge in reverse order
+        while p1 >= 0 and p2 >= 0:
+            if nums1[p1] > nums2[p2]:
+                nums1[p] = nums1[p1]
+                p1-=1
+            else:
+                nums1[p] = nums2[p2]
+                p2-=1
+            p-=1
+        
+        # copy any remaing elements from nums2 to nums1
+        nums1[:p2+1] = nums2[:p2+1]
+        
