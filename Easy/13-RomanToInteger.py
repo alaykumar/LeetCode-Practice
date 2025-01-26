@@ -12,7 +12,6 @@ class Solution:
             'M':1000,
         }
 
-        # final answer variable
         ans = 0
 
         # for loop to iterate through each character in the Roman numeral string
@@ -25,6 +24,5 @@ class Solution:
             # Otherwise add the value into the answer
             else:
                 ans += d[s[c]]
-
-        # return answer
+                
         return ans
