@@ -1,19 +1,14 @@
-class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        
-        # for loop to iterate through the array backwoards
-        for i in range(len(nums)-2, -1, -1):
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        # Pointer to track the current index
+        i = 0
+
+        while i < len(nums) - 1:
             
-            # if the current index number is the same as the index to its right 
-            # then pop the value at the right index
-            if nums[i] == nums[i+1]:
-                nums.pop(i+1)
-        
-        # return the array length
+            # If the current element is equal to the next one, remove the next element
+            if nums[i] == nums[i + 1]:
+                nums.pop(i + 1)
+            else:
+                i += 1
+                
         return len(nums)
-        
-       
