@@ -1,29 +1,16 @@
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        
-        # working backwards on the array
-
-        # setting a variable mx to -1 
+        # Initialize the maximum value to -1 (as no elements exist to the right of the last element)
         mx = -1
 
-        # counter to iterate through array backwards
-        i = len(arr) - 1
-
-        # while loop to iterate through the array
-        while i >= 0:
-
-            # storing the current index arr value in a temp variable
+        # Iterate through the array from right to left
+        for i in range(len(arr) - 1, -1, -1):
+            
             temp = arr[i]
-
-            # replaceing the current index value with the max (mx) value
+            # Replace the current value with the maximum value found so far
             arr[i] = mx
-
-            # if the temp stored value is greather than the max (mx) then
-            # replace the max variable with the temp value
+            # Update the maximum value if the current value is greater
             if temp > mx:
                 mx = temp
-            
-            # move the arr index to the left by one
-            i-=1
         
         return arr
