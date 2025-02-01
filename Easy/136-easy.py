@@ -4,8 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
-        # Create empty dict
+        
         temp = {}
 
         # run through the array
@@ -17,6 +16,6 @@ class Solution(object):
             else:
                 temp[vals] = ''
         
-        # convert dict keys to list and return the first element
+       
         return list(temp.keys())[0]
         
