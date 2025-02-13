@@ -37,7 +37,7 @@ class Solution(object):
         # initial index of the ans arr has to be the root of the tree with level 0
         helper(root, 0)
 
-        # return the final ans arr
+        
         return levels
         
         
