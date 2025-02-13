@@ -5,8 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        
-        # left and right counters for the array
+    
         l = 0
         r = len(nums) - 1
 
@@ -29,10 +28,8 @@ class Solution(object):
             elif nums[mid] > target:
                 r = mid-1
             
-            # return mid as the index once the correct position if found
+            
             else:
                 return mid
-        
-        # if the number is the larget of all values then it will be inserted at 
-        # the end of the array
+    
         return l
