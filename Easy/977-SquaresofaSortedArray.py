@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        # result array
         res = [0]*len(nums)
         
         # left pointer
@@ -38,7 +37,6 @@ class Solution(object):
                 j-=1
                 idx-=1
         
-        # return result array
         return res
             
             
