@@ -4,7 +4,6 @@ class Solution:
         i = 0
         j = len(height) - 1
         
-        # Initialize the variable to hold the maximum area found so far
         area = 0
         
         # Whille loop until the two pointers meet
@@ -18,8 +17,7 @@ class Solution:
                 i += 1
             else:
                 j -= 1
-        
-        # Return the maximum area found
+         
         return area
 
         
