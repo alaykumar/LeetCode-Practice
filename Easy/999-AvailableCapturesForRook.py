@@ -57,7 +57,6 @@ class Solution:
             elif board[r][i] == 'B':
                 break
 
-        # Return the count
         return count
 
         
