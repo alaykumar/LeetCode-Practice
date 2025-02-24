@@ -1,16 +1,16 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
         
-        # response var
+        
         res = 0
-        # while loop counter
+        
         i = 0
 
         # While loop to itereate through the chars
         while i < len(chars):
-            # temporary store the current char 
+            
             temp = chars[i]
-            # initialize the count variable for same chars
+            
             count = 0
 
             # while loop to see if the following hcars are the same as the current
