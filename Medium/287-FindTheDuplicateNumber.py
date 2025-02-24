@@ -11,10 +11,7 @@ class Solution:
             # is within 1 - n
             idx = num - 1
 
-            # if the number at the idx is negative then return
-            # the number 
             if nums[idx] < 0:
                 return num
-            # Otherwise, make the number at the idx a negative 
-            # to mark that it has been visited
+    
             nums[idx] *= -1
