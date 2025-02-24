@@ -10,10 +10,10 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[List[int]]
         """
-        # create arr for final ans
+        
         levels = []
 
-        # if there it no root, return the levels arr
+        
         if not root:
             return levels
 
